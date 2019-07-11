@@ -1,0 +1,133 @@
+﻿<Window x:Class="Consumindo_WebAPI_Livros.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Consumindo_WebAPI_Livros"
+        mc:Ignorable="d"
+        Title="Manutenção de Livros" Height="500" Width="525" Background="BlueViolet">
+    <Window.Resources>
+        <ControlTemplate x:Key="btnTemplate" TargetType="Button">
+            <Grid>
+                <Rectangle RadiusX="5" RadiusY="5" Fill="Aquamarine">
+                </Rectangle>
+                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"></ContentPresenter>
+            </Grid>
+        </ControlTemplate>
+        <Style TargetType="TextBlock">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="13"></Setter>
+        </Style>
+        <Style x:Key="tbkStyle" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="13"></Setter>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="2*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <StackPanel x:Name="livroPanel" Grid.Column="0">
+            <TextBlock Text="Lista de Livros" FontSize="18" FontWeight="Bold"></TextBlock>
+            <ListView x:Name="livrosListView" Margin="0,10,0,0" Background="Transparent" Height="400" 
+ScrollViewer.CanContentScroll="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel>
+                            <TextBlock Style="{StaticResource tbkStyle}">
+                                <TextBlock.Inlines>
+                                    <Run Text="Nome1 : "></Run>
+                                    <Run Text="{Binding nome}"></Run>
+                                </TextBlock.Inlines>
+                            </TextBlock>
+                            <TextBlock Style="{StaticResource tbkStyle}">
+                                <TextBlock.Inlines>
+                                    <Run Text="ID : "></Run>
+                                    <Run Text="{Binding id}"></Run>
+                                </TextBlock.Inlines>
+                            </TextBlock>
+                            <TextBlock Style="{StaticResource tbkStyle}">
+                                <TextBlock.Inlines>
+                                    <Run Text="Autor : "></Run>
+                                    <Run Text="{Binding autor}"></Run>
+                                </TextBlock.Inlines>
+                            </TextBlock>
+                            <TextBlock Style="{StaticResource tbkStyle}">
+                                <TextBlock.Inlines>
+                                    <Run Text="Preco : "></Run>
+                                    <Run Text="{Binding preco}"></Run>
+                                    <LineBreak/>
+                                </TextBlock.Inlines>
+                            </TextBlock>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackPanel>
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="0" Margin="10,0,0,0">
+                <TextBlock Text="Adiciona ou Atualiza um livro" FontSize="18" FontWeight="Bold"></TextBlock>
+                <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                    <TextBlock Text="Nome2" Width="75"></TextBlock>
+                    <TextBox x:Name="txtNomeLivro" Margin="10,0,0,0" Width="200"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                    <TextBlock Text="ID" Width="75"></TextBlock>
+                    <TextBox x:Name="txtIDLivro" Margin="10,0,0,0" Width="200"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                    <TextBlock Text="Autor" Width="75"></TextBlock>
+                    <TextBox x:Name="txtAutorLivro" Margin="10,0,0,0" Width="200"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                    <TextBlock Text="Preco" Width="75"></TextBlock>
+                    <TextBox x:Name="txtPreco" InputScope="Number" Margin="10,0,0,0" Width="200"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                    <Button x:Name="btnNovoLivro" Template="{StaticResource btnTemplate}" Content=" Adiciona um livro "
+ Margin="0,0,10,0" Click="btnNovoLivro_Click"></Button>
+                    <Button x:Name="btnAtualiza" Template="{StaticResource btnTemplate}" Content=" Atualiza um livro " 
+Click="btnAtualiza_Click"></Button>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Grid.Row="1" Margin="10,0,0,0">
+                <TextBlock Text="Obtém ou Deleta um livro" FontSize="18" FontWeight="Bold"></TextBlock>
+                <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                    <TextBlock Text="Informe o Id do Livro" Width="150"></TextBlock>
+                    <TextBox x:Name="txtID" InputScope="Number" Margin="10,0,0,0" Width="100"></TextBox>
+                </StackPanel>
+                <StackPanel x:Name="livroDetalhesPanel" Margin="10,0,0,0" Visibility="Collapsed">
+                    <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                        <TextBlock Text="Nome3 :" Width="75"></TextBlock>
+                        <TextBlock x:Name="txbLivroNome" Text="{Binding nome}" Margin="10,0,0,0" Width="200"></TextBlock>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                        <TextBlock Text="ID : " Width="75"></TextBlock>
+                        <TextBlock x:Name="txbLivroID" Margin="10,0,0,0" Text="{Binding id}" Width="200"></TextBlock>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                        <TextBlock Text="Autor : " Width="75"></TextBlock>
+                        <TextBlock x:Name="txbAutor" Margin="10,0,0,0" Text="{Binding autor}" Width="200"></TextBlock>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                        <TextBlock Text="Preco : " Width="75"></TextBlock>
+                        <TextBlock x:Name="txbPreco" InputScope="Number" Margin="10,0,0,0" Width="200" Text="{Binding preco}">
+                        </TextBlock>
+                    </StackPanel>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                    <Button x:Name="btnGetLivro" Template="{StaticResource btnTemplate}" Content=" Obtém um livro " 
+Margin="0,0,10,0" Click="btnGetLivro_Click"></Button>
+                    <Button x:Name="btnDeletaLivro" Template="{StaticResource btnTemplate}" Content=" Deleta um livro "
+ Click="btnDeletaLivro_Click"></Button>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>

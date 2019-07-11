@@ -1,0 +1,17 @@
+C:\Fontes\dotNet\APILivraria_CRUD_Rest\Consumindo_WebAPI_Livros\Consumindo_WebAPI_Livros\bin\Debug\Consumindo_WebAPI_Livros.exe.config
+C:\Fontes\dotNet\APILivraria_CRUD_Rest\Consumindo_WebAPI_Livros\Consumindo_WebAPI_Livros\obj\Debug\MainWindow.g.cs
+C:\Fontes\dotNet\APILivraria_CRUD_Rest\Consumindo_WebAPI_Livros\Consumindo_WebAPI_Livros\obj\Debug\App.g.cs
+C:\Fontes\dotNet\APILivraria_CRUD_Rest\Consumindo_WebAPI_Livros\Consumindo_WebAPI_Livros\obj\Debug\Consumindo_WebAPI_Livros_MarkupCompile.cache
+C:\Fontes\dotNet\APILivraria_CRUD_Rest\Consumindo_WebAPI_Livros\Consumindo_WebAPI_Livros\obj\Debug\Consumindo_WebAPI_Livros_MarkupCompile.lref
+C:\Fontes\dotNet\APILivraria_CRUD_Rest\Consumindo_WebAPI_Livros\Consumindo_WebAPI_Livros\bin\Debug\Consumindo_WebAPI_Livros.exe
+C:\Fontes\dotNet\APILivraria_CRUD_Rest\Consumindo_WebAPI_Livros\Consumindo_WebAPI_Livros\bin\Debug\Consumindo_WebAPI_Livros.pdb
+C:\Fontes\dotNet\APILivraria_CRUD_Rest\Consumindo_WebAPI_Livros\Consumindo_WebAPI_Livros\bin\Debug\Newtonsoft.Json.dll
+C:\Fontes\dotNet\APILivraria_CRUD_Rest\Consumindo_WebAPI_Livros\Consumindo_WebAPI_Livros\bin\Debug\System.Net.Http.Formatting.dll
+C:\Fontes\dotNet\APILivraria_CRUD_Rest\Consumindo_WebAPI_Livros\Consumindo_WebAPI_Livros\bin\Debug\Newtonsoft.Json.xml
+C:\Fontes\dotNet\APILivraria_CRUD_Rest\Consumindo_WebAPI_Livros\Consumindo_WebAPI_Livros\bin\Debug\System.Net.Http.Formatting.xml
+C:\Fontes\dotNet\APILivraria_CRUD_Rest\Consumindo_WebAPI_Livros\Consumindo_WebAPI_Livros\obj\Debug\MainWindow.baml
+C:\Fontes\dotNet\APILivraria_CRUD_Rest\Consumindo_WebAPI_Livros\Consumindo_WebAPI_Livros\obj\Debug\Consumindo_WebAPI_Livros.g.resources
+C:\Fontes\dotNet\APILivraria_CRUD_Rest\Consumindo_WebAPI_Livros\Consumindo_WebAPI_Livros\obj\Debug\Consumindo_WebAPI_Livros.Properties.Resources.resources
+C:\Fontes\dotNet\APILivraria_CRUD_Rest\Consumindo_WebAPI_Livros\Consumindo_WebAPI_Livros\obj\Debug\Consumindo_WebAPI_Livros.csproj.GenerateResource.Cache
+C:\Fontes\dotNet\APILivraria_CRUD_Rest\Consumindo_WebAPI_Livros\Consumindo_WebAPI_Livros\obj\Debug\Consumindo_WebAPI_Livros.exe
+C:\Fontes\dotNet\APILivraria_CRUD_Rest\Consumindo_WebAPI_Livros\Consumindo_WebAPI_Livros\obj\Debug\Consumindo_WebAPI_Livros.pdb
