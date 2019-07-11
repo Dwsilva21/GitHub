@@ -22,23 +22,44 @@ namespace WebApi_Livros.Controllers
             Livro livro = livroRepositorio.Get(id);
             if (livro == null)
             {
-                return Request.CreateErrorResponse(HttpStatusCode.NotFound, "Estudante não localizado para o Id informado");
+                return Request.CreateErrorResponse(HttpStatusCode.NotFound, "Livro não localizado para o Id informado");
             }
             else
             {
                 return Request.CreateResponse<Livro>(HttpStatusCode.OK, livro);
             }
         }
-        public IEnumerable<Livro> GetEstudantesPorGenero(string autor)
+
+        public IEnumerable<Livro> GetLivrosPorNome(string nome)
+        {
+            return livroRepositorio.GetAll().Where(
+                e => string.Equals(e.nome, nome, StringComparison.OrdinalIgnoreCase));
+        }
+
+        public IEnumerable<Livro> GetLivrosPorAutor(string autor)
         {
             return livroRepositorio.GetAll().Where(
                 e => string.Equals(e.autor, autor, StringComparison.OrdinalIgnoreCase));
         }
+
         public IEnumerable<Livro> GetLivrosPorPreco(double preco)
         {
             return livroRepositorio.GetAll().Where(
                 e => string.Equals(e.preco.ToString(), preco.ToString(), StringComparison.OrdinalIgnoreCase));
         }
+
+        public IEnumerable<Livro> GetLivrosPorData(DateTime data)
+        {
+            return livroRepositorio.GetAll().Where(
+                e => string.Equals(e.data.ToString(), data.ToString(), StringComparison.OrdinalIgnoreCase));
+        }
+
+        public IEnumerable<Livro> GetLivrosPorImagem(string imagem)
+        {
+            return livroRepositorio.GetAll().Where(
+                e => string.Equals(e.imagem.ToString(), imagem.ToString(), StringComparison.OrdinalIgnoreCase));
+        }
+
         public HttpResponseMessage PostLivro(Livro livro)
         {
             bool result = livroRepositorio.Add(livro);
@@ -54,7 +75,8 @@ namespace WebApi_Livros.Controllers
                 return Request.CreateErrorResponse(HttpStatusCode.BadRequest, "Livro não foi incluído com sucesso");
             }
         }
-        public HttpResponseMessage PutEstudante(int id, Livro livro)
+
+        public HttpResponseMessage PutLivro(int id, Livro livro)
         {
             livro.id = id;
             if (!livroRepositorio.Update(livro))

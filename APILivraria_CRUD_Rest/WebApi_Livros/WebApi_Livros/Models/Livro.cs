@@ -11,7 +11,7 @@ namespace WebApi_Livros.Models
         public int id { get; set; }
         public string autor { get; set; }
         public double preco { get; set; }
-        public DateTime data { get; set; }
+        public DateTime  data { get; set; }
         public string imagem { get; set; }
 
     }
